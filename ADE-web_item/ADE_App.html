@@ -6,6 +6,7 @@
   <title>ADEnterprises - IT Solutions for Web Applications</title>
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2797/2797385.png" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="program.js"></script> <!-- External JS -->
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -36,7 +37,7 @@
   <section id="hero" class="text-gray-600 body-font">
     <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-        <img class="object-cover object-center rounded shadow-lg" alt="hero" src="https://img.freepik.com/free-vector/programmers-working-flat-style_23-2148203320.jpg">
+        <img id="heroImage" class="object-cover object-center rounded shadow-lg" alt="hero">
       </div>
       <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
         <h1 class="text-4xl mb-4 font-bold text-gray-900">ADEnterprises - IT Solutions for Web Applications</h1>
@@ -52,7 +53,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-12 bg-white">
+  <section id="about" class="py-12">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-2xl font-semibold mb-4 text-indigo-600">About Us</h2>
       <p class="text-gray-700 max-w-2xl mx-auto">
@@ -108,38 +109,6 @@
       </p>
     </div>
   </footer>
-
-  <!-- JavaScript -->
-  <script>
-    // Toggle Nav Menu
-    function toggleNav() {
-      const nav = document.getElementById('navLinks');
-      nav.classList.toggle('hidden');
-    }
-
-    // Scroll to Hero
-    function getStarted() {
-      const section = document.getElementById('hero');
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Form validation
-    function validateForm() {
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      if (!name || !email || !message) {
-        alert("Please fill in all fields.");
-        return false;
-      }
-      alert("Thanks for contacting us, " + name + "!");
-      return true;
-    }
-  </script>
 
 </body>
 </html>
